@@ -1,0 +1,81 @@
+site_name: TuringEating
+site_description: TuringEating
+repo_name: ZJU-Turing/TuringEating
+repo_url: https://github.com/ZJU-Turing/TuringEating
+copyright: Copyright &copy; 2023-2024 浙江大学图灵班
+
+nav:
+  - 主页:
+    - index.md
+  - 校内:
+    - inschool/index.md
+  - 校区周围:
+    - aroundschool/index.md
+  - 杭州:
+    - hangzhou/index.md
+
+
+theme:
+  name: 'material'
+  language: 'zh'
+  icon:
+    repo: fontawesome/brands/github
+    logo: siteicons/bowl-food
+  custom_dir: overrides
+  favicon: images/icon.png
+  features:
+    - content.code.annotate
+    - content.action.edit
+    - navigation.tracking
+    - navigation.top
+    - navigation.tabs
+    - navigation.footer
+    - navigation.indexes
+    - navigation.sections
+  font:
+    text: Noto Serif SC
+  palette:
+    - scheme: default
+
+plugins:
+  - turing_comments:
+
+extra_css:
+  - https://fonts.googleapis.com/css?family=Noto+Serif+SC:300,300i,400,400i,700,700i&display=fallback
+  - css/admonition.css
+extra_javascript:
+  - js/katex.js
+
+markdown_extensions:
+  - toc:
+      permalink: true
+      toc_depth: 4
+  - meta
+  - def_list
+  - attr_list
+  - md_in_html
+  - sane_lists
+  - admonition
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.snippets
+  - pymdownx.magiclink
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      options:
+        custom_icons:
+          - overrides/.icons
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.arithmatex:
+      generic: true

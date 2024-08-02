@@ -1,0 +1,3 @@
+[mkdocs.plugins]
+turing_comments = mkdocs_turing_plugins.comments:CommentsPlugin
+
