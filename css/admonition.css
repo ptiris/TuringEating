@@ -1,0 +1,35 @@
+md-typeset .admonition.comments,
+.md-typeset details.comments {
+  border-color: rgb(0, 63, 136, 0);
+  background-color: hsla(var(--md-hue),0%,100%,0.025);
+}
+.md-typeset .comments > .admonition-title,
+.md-typeset .comments > summary {
+  background-color: rgba(0, 63, 136, 0.1);
+}
+[data-md-color-scheme="slate"] .md-typeset .comments > .admonition-title,
+[data-md-color-scheme="slate"] .md-typeset .comments > summary {
+  background-color: rgba(60, 53, 120, 0.2);
+}
+.md-typeset .comments > .admonition-title::before,
+.md-typeset .comments > summary::before {
+  content: none;
+}
+.md-typeset :is(.admonition-title,summary,.comments) {
+  border: 0 solid rgb(0, 63, 136, 0);
+}
+[dir=ltr] .md-typeset .comments > summary {
+  display: flex;
+  align-items: center;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
+  padding-top: 0.3rem;
+}
+.md-typeset .comments > summary > em {
+  color:rgb(0, 114, 255);
+  margin-right: 0.2rem;
+}
+
+.md-typeset .comments > summary img{
+  margin-left: 0.5rem;
+}
