@@ -7,6 +7,7 @@ copyright: Copyright &copy; 2023-2024 浙江大学图灵班
 nav:
   - 主页:
     - index.md
+    - contributing.md
   - 校内:
     - inschool/index.md
   - 校区周围:
@@ -39,7 +40,11 @@ theme:
 
 plugins:
   - search
-  - turing_comments
+  - turing_comments:
+      enabled: True
+      csv_data: 
+        - docs/data/zjg.csv
+        - docs/data/hangzhou.csv
 
 extra_css:
   - https://fonts.googleapis.com/css?family=Noto+Serif+SC:300,300i,400,400i,700,700i&display=fallback
@@ -67,8 +72,8 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.inlinehilite
   - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:pymdownx.emoji.twemoji
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
       options:
         custom_icons:
           - overrides/.icons
